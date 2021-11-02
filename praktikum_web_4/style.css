@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #F7F3E9;
+  margin: 0;
+}
+
+h1{
+  margin: 2.5rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+select{
+  border: 2px solid #5EAAA8;
+  border-radius: 8px;
+  padding: 5px 20px 5px 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  min-width: 20%;
+  margin-right: 0;
+  background-color: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: white;
+  overflow-x: auto;
+  width: 70%;
+  height: 110px;
+  border-radius: 8px;
+  box-shadow:
+    0 3.9px 4.6px rgba(0, 0, 0, 0.08),
+    0 12.3px 8.4px rgba(0, 0, 0, 0.056),
+    0 18.8px 19.2px rgba(0, 0, 0, 0.037),
+    0 22px 40px rgba(0, 0, 0, 0.019)
+  ;
+}
+
+th, td {
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  font-size: 14px;
+  padding: 10px;
+}
+
+tr:hover {
+  background-color: #A3D2CA;
+  transition: .3s;
+}
+
+
+thead th {
+  background-color: #5EAAA8;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+tbody td{
+  overflow-x:auto;
+}
+
+footer > p {
+  font-family: 'Poppins', sans-serif;
+  margin: 2.5rem 0;
+}
+
+footer > p > a {
+  text-decoration: underline; 
+  color:black;
+  font-weight: 500;
+}
+
+.Hidden{
+  display: none;
+}

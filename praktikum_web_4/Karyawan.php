@@ -14,7 +14,14 @@ abstract class Karyawan
     "Senior" => 5000000
   );
 
-  abstract public function __construct($Nama, $TTL, $Jenis_kelamin, $Jabatan);
+  public function __construct($Nama, $TTL, $Jenis_kelamin, $Jabatan)
+  {
+    $this->Nama = $Nama;
+    $this->TTL = $TTL;
+    $this->Jenis_kelamin = $Jenis_kelamin;
+    $this->Jabatan = $Jabatan;
+    $this->setStatus();
+  }
 
   abstract protected function calc_Gaji();
 
@@ -42,39 +49,33 @@ abstract class Karyawan
   {
     return $this->Status;
   }
+
+  abstract public function setStatus();
 }
 
 class Karyawan_Fulltime extends Karyawan
 {
-  public function __construct($Nama, $TTL, $Jenis_kelamin, $Jabatan)
-  {
-    $this->Nama = $Nama;
-    $this->TTL = $TTL;
-    $this->Jenis_kelamin = $Jenis_kelamin;
-    $this->Jabatan = $Jabatan;
-    $this->Status = "Fulltime";
-  }
-
   public function calc_Gaji()
   {
     return $this->list_gaji_kotor[$this->Jabatan];
+  }
+
+  public function setStatus()
+  {
+    $this->Status = 'Fulltime';
   }
   
 }
 
 class Karyawan_Parttime extends Karyawan
 {
-  public function __construct($Nama, $TTL, $Jenis_kelamin, $Jabatan)
-  {
-    $this->Nama = $Nama;
-    $this->TTL = $TTL;
-    $this->Jenis_kelamin = $Jenis_kelamin;
-    $this->Jabatan = $Jabatan;
-    $this->Status = "Parttime";
-  }
-
   public function calc_Gaji()
   {
     return $this->list_gaji_kotor[$this->Jabatan] / 2;
+  }
+
+  public function setStatus()
+  {
+    $this->Status = 'Parttime';
   }
 }

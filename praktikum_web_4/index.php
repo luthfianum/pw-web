@@ -46,13 +46,13 @@ $datas = array(
       </thead>
       <tbody>
         <?php foreach ($datas as $index => $data) { ?>
-          <tr class="<?= $data->Status ?>">
+          <tr class="<?= $data->getStatus() ?>">
             <td><?= $index + 1 ?></td>
-            <td><?= $data->Nama ?></td>
-            <td><?= $data->TTL ?></td>
-            <td><?= $data->Jenis_kelamin ?></td>
-            <td><?= $data->Jabatan ?></td>
-            <td><?= $data->Status ?></td>
+            <td><?= $data->getNama() ?></td>
+            <td><?= $data->getTTL() ?></td>
+            <td><?= $data->getJenis_kelamin() ?></td>
+            <td><?= $data->getJabatan() ?></td>
+            <td><?= $data->getStatus() ?></td>
             <td><?= $data->calc_Gaji() ?></td>
           </tr>
         <?php } ?>

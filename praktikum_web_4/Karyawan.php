@@ -1,12 +1,13 @@
 <?php
 abstract class Karyawan
 {
-  public $Nama;
-  public $TTL;
-  public $Jenis_kelamin;
-  public $Jabatan;
-  public $Status;
-  public $Gaji;
+  protected $Nama;
+  protected $TTL;
+  protected $Jenis_kelamin;
+  protected $Jabatan;
+  protected $Status;
+  protected $Gaji;
+
   public $list_gaji_kotor = array(
     "Junior" => 2000000,
     "Amateur" => 3500000,
@@ -16,6 +17,31 @@ abstract class Karyawan
   abstract public function __construct($Nama, $TTL, $Jenis_kelamin, $Jabatan);
 
   abstract protected function calc_Gaji();
+
+  public function getNama()
+  {
+    return $this->Nama;
+  }
+  
+  public function getTTL()
+  {
+    return $this->TTL;
+  }
+
+  public function getJenis_kelamin()
+  {
+    return $this->Jenis_kelamin;
+  }
+
+  public function getJabatan()
+  {
+    return $this->Jabatan;
+  }
+
+  public function getStatus()
+  {
+    return $this->Status;
+  }
 }
 
 class Karyawan_Fulltime extends Karyawan
@@ -33,6 +59,7 @@ class Karyawan_Fulltime extends Karyawan
   {
     return $this->list_gaji_kotor[$this->Jabatan];
   }
+  
 }
 
 class Karyawan_Parttime extends Karyawan

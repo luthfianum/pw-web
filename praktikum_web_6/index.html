@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Praktikum 6</title>
+</head>
+
+<body class="p-5">
+  <div class="flex justify-center h-screen items-center">
+    <div
+      class='flex max-w-md w-full h-1/2 justify-center bg-white rounded-lg overflow-hidden mx-auto flex flex-col p-5'>
+      <!-- This is the input component -->
+      <div class="relative h-10 input-component mb-5 w-full">
+        <input id="nama_pelanggan" type="text" name="nama_pelanggan"
+          class="h-full w-full border-gray-300 px-2 transition-all border-blue rounded" required />
+        <label for="nama_pelanggan" class="absolute left-2 transition-all bg-white px-1">
+          Nama Pelanggan
+        </label>
+      </div>
+      <div class="relative h-10 mb-5 empty w-full">
+        <select id="kategori" class="h-full w-full border border-gray-300 rounded px-2 py-2 outline-none mb-5">
+          <option class="py-1">Sosial</option>
+          <option class="py-1">Rumah</option>
+          <option class="py-1">Apartement</option>
+          <option class="py-1">Industri</option>
+          <option class="py-1">Villa</option>
+        </select>
+        <label for="" class="absolute left-2 transition-all bg-white px-1">
+          Kategori
+        </label>
+      </div>
+      <!-- This is the input component -->
+      <div class="relative h-10 input-component mb-5">
+        <input id="jmlh_pemakaian" type="number" name="jmlh_pemakaian"
+          class="h-full w-full border-gray-300 px-2 transition-all border-blue rounded" min="0" max="31" required />
+        <label for="jmlh_pemakaian" class="absolute left-2 transition-all bg-white px-1">
+          Jumlah Pemakaian
+        </label>
+      </div>
+      <a onclick="calculate()"
+        class="bg-blue-500 rounded-lg font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600">
+        Calculate
+      </a>
+    </div>
+  </div>
+  <div class="container mx-auto justify-center h-screen items-center" id="view_table">
+    <div class="py-8">
+      <div>
+        <h2 class="text-2xl font-semibold leading-tight">Invoices</h2>
+      </div>
+      <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+        <div class="inline-block min-w-full shadow-md rounded-lg overflow-y-auto" style="max-height: 83vh;">
+          <table class="min-w-full leading-normal">
+            <thead>
+              <tr>
+                <th
+                  class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 sticky top-0 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                  Jumlah
+                </th>
+                <th
+                  class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 sticky top-0 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                  Tarif per KWh
+                </th>
+                <th
+                  class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 sticky top-0 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                  Abodemen
+                </th>
+                <th
+                  class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 sticky top-0 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                  Sub-Total
+                </th>
+              </tr>
+            </thead>
+            <tbody id="invoice_table">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex items-right justify-center px-4" id="receipt_card">
+    <div class="w-full  bg-white w-full rounded-lg shadow-xl">
+      <div class="p-4 border-b">
+        <h2 class="text-2xl ">
+          Total
+        </h2>
+      </div>
+      <div>
+        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+          <p class="text-gray-600">
+            Sub-total
+          </p>
+          <p>
+            Jane Doe
+          </p>
+        </div>
+        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+          <p class="text-gray-600">
+            Pajak
+          </p>
+          <p>
+            Product Manager
+          </p>
+        </div>
+        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+          <p class="text-gray-600">
+            Total
+          </p>
+          <p>
+            Janedoe@gmail.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

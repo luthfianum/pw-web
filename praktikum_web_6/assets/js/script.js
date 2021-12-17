@@ -35,18 +35,20 @@ function calculate() {
     kategori: document.getElementById("kategori").value,
     jmlh_pemakaian: document.getElementById("jmlh_pemakaian").value,
     validate: () => {
-      if (data.nama_pelanggan === '') {
-        window.alert("Isi Nama Pelanggan");
+      if (data.nama_pelanggan == '') {
+        alert("Fields Nama Pelanggan Harus Diisi!");
         return false;
       } else if (data.jmlh_pemakaian == '') {
-        window.alert("Isi Jumlah Pemakaian");
+        alert("Fields Jumlah Pemakaian Harus Diisi!");
         return false;
+      } else if (data.jmlh_pemakaian > 30 || data.jmlh_pemakaian <= 0 ) {
+        alert("Jumlah Pemakaian Tidak Valid")
       }
       return true
     }
   }
   
-  if (data.validate) {
+  if (data.validate()) {
     let data_kategori = convert_kategori[data.kategori]
     invoice_table.innerHTML = '';
     receipt_card.innerHTML = '';

@@ -1,7 +1,35 @@
+const convert_kategori = {
+  "Sosial" : {
+    "abodemen" : 10000,
+    "tarif" : 300,
+    "pajak" : 0
+  },
+  "Rumah" : {
+    "abodemen" : 30000,
+    "tarif" : 500,
+    "pajak" : 0.10
+  },
+  "Apartement" : {
+    "abodemen" : 50000,
+    "tarif" : 750,
+    "pajak" : 0.15
+  },
+  "Industri" : {
+    "abodemen" : 75000,
+    "tarif" : 1000,
+    "pajak" : 0.20
+  },
+  "Villa" : {
+    "abodemen" : 100000,
+    "tarif" : 1250,
+    "pajak" : 0.25
+  },
+}
+
 function calculate() {
   const invoice_table = document.querySelector('#invoice_table');
   const receipt_card = document.querySelector('#receipt_card');
-  const view_table = document.querySelector('#view_table')
+  const view_table = document.querySelector('#view_table');
   const data = {
     nama_pelanggan: document.getElementById("nama_pelanggan").value,
     kategori: document.getElementById("kategori").value,
@@ -17,67 +45,42 @@ function calculate() {
       return true
     }
   }
-  const convert_kategori = {
-    "Sosial" : {
-      "abodemen" : 10000,
-      "tarif" : 300,
-      "pajak" : 0
-    },
-    "Rumah" : {
-      "abodemen" : 30000,
-      "tarif" : 500,
-      "pajak" : 0.10
-    },
-    "Apartement" : {
-      "abodemen" : 50000,
-      "tarif" : 750,
-      "pajak" : 0.15
-    },
-    "Industri" : {
-      "abodemen" : 75000,
-      "tarif" : 1000,
-      "pajak" : 0.20
-    },
-    "Villa" : {
-      "abodemen" : 100000,
-      "tarif" : 1250,
-      "pajak" : 0.25
-    },
-  }
+  
   if (data.validate) {
+    let data_kategori = convert_kategori[data.kategori]
     invoice_table.innerHTML = '';
     receipt_card.innerHTML = '';
     for(let i = 1; i <= data.jmlh_pemakaian; i++) {
-      invoice_table.innerHTML += tableDataMaker(i, convert_kategori[data.kategori]);
+      invoice_table.innerHTML += tableDataMaker(i, data_kategori);
     }
-    receipt_card.innerHTML = receiptMaker(data, convert_kategori[data.kategori])
+    receipt_card.innerHTML = receiptMaker(data, data_kategori)
     view_table.scrollIntoView({behavior: "smooth"});
   }
 }
 
 function tableDataMaker(jumlah, data) {
   let result = `
-              <tr>
-                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <div class="flex">
-                    <div class="ml-3">
-                      <p class="text-gray-900 whitespace-no-wrap">
-                        ${jumlah}
-                      </p>
-                    </div>
-                  </div>
-                </td>
-                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <p class="text-gray-900 whitespace-no-wrap">${data.tarif * jumlah}</p>
-                </td>
-                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <p class="text-gray-900 whitespace-no-wrap">${data.abodemen}</p>
-                </td>
-                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <p class="text-gray-900 whitespace-no-wrap">${data.abodemen + (data.tarif * jumlah)}</p>
-                </td>
-              </tr>
-              `
+    <tr>
+      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+        <div class="flex">
+          <div class="ml-3">
+            <p class="text-gray-900 whitespace-no-wrap">
+              ${jumlah}
+            </p>
+          </div>
+        </div>
+      </td>
+      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+        <p class="text-gray-900 whitespace-no-wrap">${data.tarif * jumlah}</p>
+      </td>
+      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+        <p class="text-gray-900 whitespace-no-wrap">${data.abodemen}</p>
+      </td>
+      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+        <p class="text-gray-900 whitespace-no-wrap">${data.abodemen + (data.tarif * jumlah)}</p>
+      </td>
+    </tr>
+  `
   return result
 }
 

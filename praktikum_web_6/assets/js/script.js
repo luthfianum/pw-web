@@ -28,7 +28,7 @@ function calculate() {
       "tarif" : 500,
       "pajak" : 0.10
     },
-    "Apartemen" : {
+    "Apartement" : {
       "abodemen" : 50000,
       "tarif" : 750,
       "pajak" : 0.15
@@ -93,6 +93,30 @@ function receiptMaker(data, kategori) {
         </h2>
       </div>
       <div>
+        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+          <p class="text-gray-600">
+            Nama
+          </p>
+          <p>
+            ${data.nama_pelanggan}
+          </p>
+        </div>
+        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+          <p class="text-gray-600">
+            Kategori
+          </p>
+          <p>
+            ${data.kategori}
+          </p>
+        </div>
+        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+          <p class="text-gray-600">
+            Jumlah Pemakaian
+          </p>
+          <p>
+            ${data.jmlh_pemakaian}
+          </p>
+        </div>
         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
           <p class="text-gray-600">
             Sub-total

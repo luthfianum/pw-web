@@ -43,6 +43,7 @@ function calculate() {
         return false;
       } else if (data.jmlh_pemakaian > 30 || data.jmlh_pemakaian <= 0 ) {
         alert("Jumlah Pemakaian Tidak Valid")
+        return false;
       }
       return true
     }

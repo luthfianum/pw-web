@@ -5,12 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Framework yang dipakai Tailwind dan DaisyUI -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@1.19.0/dist/full.css" rel="stylesheet" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@1.19.0/dist/themes.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <!-- Ini buat bikin Icon -->
   <link rel="shortcut icon" href="https://i.ibb.co/tDVy1Th/blank-check-box.png" type="image/x-icon">
-  <title>Praktikum 6</title>
+  <title>Praktikum 7</title>
 </head>
 
 <body>
@@ -20,6 +23,7 @@
         <img src="http://placekitten.com/150/150" alt="">
       </div>
       <div class="flex justify-center items-center mx-auto mb-5 p-3">
+        <!-- Input Provinsi -->
         <select class="select select-bordered w-full max-w-xs mr-5" id="select_provinsi">
           <option disabled="disabled" selected="selected">Provinsi</option>
           <option>Kalimantan Timur</option>
@@ -27,13 +31,19 @@
           <option>Kalimantan Barat</option>
           <option>Kalimantan Utara</option>
         </select>
+
+        <!-- Input Kota -->
         <select class="select select-bordered w-full max-w-xs" disabled="disabled" id="select_kota">
           <option disabled="disabled" selected="selected">Kota</option>
         </select>
       </div>
+
+      <!-- Result hasil atau petunjuk -->
       <div class="flex justify-center items-center mx-auto mb-5 p-3">
         <p class="font-medium" id="result">Silahkan Pilih Provinsi</p>
       </div>
+
+      <!-- Toggle Checkbox tema -->
       <input type="checkbox" class="toggle mx-auto" id="toggle">
     </div>
   </div>

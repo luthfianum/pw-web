@@ -1,0 +1,84 @@
+{
+  "menu": [
+    {
+      "jenis": "Makanan",
+      "nama": "Sate",
+      "deskripsi": "Makanan khas madura",
+      "harga": "15000",
+      "estimasi": "",
+      "gambar": "https://asset.kompas.com/crops/89gV9XIgLw8Tzv2im_h4C9aEjd8=/0x0:993x662/750x500/data/photo/2021/03/27/605ed24c33816.jpg"
+    },
+    {
+      "jenis": "Makanan",
+      "nama": "Rendang",
+      "deskripsi": "Makanan khas dari padang",
+      "harga": "15000",
+      "estimasi": "",
+      "gambar": "https://cdn-2.tstatic.net/tribunnews/foto/bank/images/resep-rendang.jpg"
+    },
+    {
+      "jenis": "Makanan",
+      "nama": "Lontong Balap",
+      "deskripsi": "Makanan khas kota Surabaya",
+      "harga": "10000",
+      "estimasi": "",
+      "gambar": "https://asset.kompas.com/crops/XalY7zQWRnusmCIgztHc5DpgHVs=/0x83:1000x750/750x500/data/photo/2020/09/03/5f509ac4e7f59.jpg"
+    },
+    {
+      "jenis": "Makanan",
+      "nama": "Soto Banjar",
+      "deskripsi": "Makanan khas dari kalimantan",
+      "harga": "10000",
+      "estimasi": "",
+      "gambar": "https://awsimages.detik.net.id/community/media/visual/2021/02/19/soto-banjar_43.jpeg?w=700&q=90"
+    },
+    {
+      "jenis": "Minuman",
+      "nama": "Bir Pletok",
+      "deskripsi": "Bir tapi halal khas betawi",
+      "harga": "10000",
+      "estimasi": "",
+      "gambar": "https://img.herstory.co.id/articles/archive_20200306/bir-pletok-20200306-123536.jpg"
+    },
+    {
+      "jenis": "Minuman",
+      "nama": "Kopi Hitam",
+      "deskripsi": "Enak diminum sambil ngoding",
+      "harga": "5000",
+      "estimasi": "",
+      "gambar": "https://awsimages.detik.net.id/community/media/visual/2019/11/21/89fe9cac-6e4f-4203-a3e5-3c0b26928587_169.jpeg?w=620"
+    },
+    {
+      "jenis": "Minuman",
+      "nama": "Bajigur",
+      "deskripsi": "Minuman khas jabar",
+      "harga": "5000",
+      "estimasi": "",
+      "gambar": "https://asset.kompas.com/crops/NwjTDQ2A5YgdlFNkE7HQ1VF5PNs=/111x83:735x499/750x500/data/photo/2020/03/28/5e7eb826a19c9.jpg"
+    },
+    {
+      "jenis": "Minuman",
+      "nama": "Wedang Ronde",
+      "deskripsi": "Dari jogja nich",
+      "harga": "5000",
+      "estimasi": "",
+      "gambar": "http://blog.sayurbox.com/wp-content/uploads/2020/03/46752367_2077453532293446_89971928276739870_n-595x400.jpg"
+    },
+    {
+      "jenis": "Makanan",
+      "nama": "Indomie",
+      "deskripsi": "King of makanan",
+      "harga": "5000",
+      "estimasi": "",
+      "gambar": "https://img-global.cpcdn.com/recipes/6eb67ea7d46f3868/680x482cq70/resep-indomie-goreng-berkuah-foto-resep-utama.jpg"
+    },
+    {
+      "jenis": "Minuman",
+      "nama": "Teh hangat",
+      "deskripsi": "King of minuman",
+      "harga": "3000",
+      "estimasi": "",
+      "gambar": "https://fdid.imgix.net/prod/teh-hangat-4qRlcznJFW.jpg"
+    }
+  ]
+}

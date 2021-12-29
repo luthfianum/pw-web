@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Kebanyakan make sepertinya wkwkwk -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@1.20.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@1.20.0/dist/themes.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  
+  <title>Praktikum 8 - JSON</title>
+</head>
+
+<body data-theme="light" class="bg-base-100 text-base-content" style="min-height: 100vh">
+  <!-- Navbar -->
+  <div class="navbar mb-2 shadow-lg bg-base-100 text-base-content">
+    <div class="px-2 mx-2 navbar-start">
+      <span class="text-lg font-bold text-warning">
+        KantasUP
+      </span>
+    </div>
+    <div class="hidden px-2 mx-2 navbar-center lg:flex">
+      <div class="flex items-stretch gap-x-1.5">
+        <a class="btn btn-ghost btn-sm rounded-btn hover:bg-warning" onclick="chooseCategory()">
+          All
+        </a>
+        <a class="btn btn-ghost btn-sm rounded-btn hover:bg-warning" onclick="chooseCategory('Makanan')">
+          Makanan
+        </a>
+        <a class="btn btn-ghost btn-sm rounded-btn hover:bg-warning" onclick="chooseCategory('Minuman')">
+          Minuman
+        </a>
+        <a class="btn btn-ghost btn-sm rounded-btn hover:bg-warning" onclick="chooseCategory('Dessert')">
+          Dessert
+        </a>
+      </div>
+    </div>
+    <div class="hidden px-2 mx-2 navbar-end lg:flex">
+      <input type="checkbox" class="toggle bg-warning" onChange="changeTheme()" id="toggleTheme">
+    </div>
+  </div>
+  <!-- End of Navbar -->
+
+  <!-- Title -->
+  <div class="container flex flex-row flex-wrap mx-auto">
+    <p class="text-2xl font-semibold mt-8 mb-5" id="title"></p>
+  </div>
+  <!-- End of Title -->
+
+  <!-- Content -->
+  <div class="container flex flex-row flex-wrap mx-auto pb-10" id="content">
+  </div>
+  <!-- End of Content -->
+
+  <!-- Footer -->
+  <footer class="p-4 footer bg-base-100 text-base-content footer-center">
+    <div>
+      <p>Tugas praktikum 8 is made with <i class="fas fa-heart" style="color:red" aria-hidden="true"></i> by <a href="https://github.com/luthfianum">Luthfi Anum </a></p>
+    </div>
+  </footer>
+  <!-- End of Footer -->
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

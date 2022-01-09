@@ -1,7 +1,7 @@
-<?php 
-  include 'function.php';
-  $datum = getData(); 
-  
+<?php
+include 'function.php';
+$datum = getData();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +17,7 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@1.20.0/dist/themes.css" rel="stylesheet" type="text/css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-  
+
   <title>Praktikum 8 - JSON</title>
 </head>
 
@@ -32,31 +32,33 @@
       <table class="table w-full">
         <thead>
           <tr>
-            <th>#</th> 
-            <th>Name</th> 
-            <th>Email</th> 
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
             <th>Address</th>
-            <th>Gender</th> 
-            <th>Position</th> 
+            <th>Gender</th>
+            <th>Position</th>
             <th>Status</th>
             <th>Action</th>
           </tr>
-        </thead> 
+        </thead>
         <tbody>
-          <?php foreach($datum as $index=>$data) : ?>
-          <tr class="hover">
-            <td><?= $index + 1; ?></td> 
-            <td><?= $data['name']; ?></td> 
-            <td><?= $data['email']; ?></td>  
-            <td><?= $data['address']; ?></td>
-            <td><?= $data['gender']; ?></td>
-            <td><?= $data['position']; ?></td>
-            <td><?= $data['status']; ?></td>
-            <td>
-              <a class="btn btn-sm btn-error btn-outline text-base-content hover" href="delete_data.php?id=<?= $data["id"];?>">Delete</a>
-            </td>
-          </tr>
-          <?php endforeach; ?>
+          <?php if ($datum) : ?>
+            <?php foreach ($datum as $index => $data) : ?>
+              <tr class="hover">
+                <td><?= $index + 1; ?></td>
+                <td><?= $data['name']; ?></td>
+                <td><?= $data['email']; ?></td>
+                <td><?= $data['address']; ?></td>
+                <td><?= $data['gender']; ?></td>
+                <td><?= $data['position']; ?></td>
+                <td><?= $data['status']; ?></td>
+                <td>
+                  <a class="btn btn-sm btn-error btn-outline text-base-content hover" href="delete_data.php?id=<?= $data["id"]; ?>">Delete</a>
+                </td>
+              </tr>
+            <?php endforeach; ?>
+          <?php endif; ?>
         </tbody>
       </table>
     </div>
